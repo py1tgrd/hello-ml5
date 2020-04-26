@@ -10,7 +10,7 @@ const UpdateImageButton = document.getElementById('UpdateImage'); //Load model
 const model_loading_status = document.getElementById('model_loading_status'); 
 
 
-var c = ml5.imageClassifier('darknet', {version:'darknet-tiny', alpha:1.0, topk:3,}, (err, model) =>{
+var c = ml5.imageClassifier('MobileNet', (err, model) =>{
   model_loading_status.innerText="Loaded :-)";
   console.log("Model loaded");
 }
