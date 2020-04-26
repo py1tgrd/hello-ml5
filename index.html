@@ -7,11 +7,28 @@
 </head>
 
 <body>
-  <h1>Image classification using MobileNet</h1>
-    <div>Example tutorial from <a = href="https://ml5js.org/getting-started/hello-ml5/">https://ml5js.org/getting-started/hello-ml5/</a></div>
+  <h1>Image classification using MobileNet and p5.js</h1>
 
-    <p>The MobileNet model labeled this as <span id="result">...</span> with a confidence of <span id="probability">...</span>.</p>
-    <img src="images/cat.jpg" id="image" width="400"/>
+  <div>Choose model</div>
+  <select id="model" name="model">
+    <option value="MobileNet" default>MobileNet</option>
+    <option value="darknet" disabled>Darknet</option>
+    <option value="DoodleNet" disabled>DoodleNet</option>
+  </select>
+  <span id="model_loading_status">Model not loaded</span>
+  <div><button id="LoadModel">Load Model</button></div>
+  <div>Choose image</div>
+  <select id="image" name="image">
+    <option value="bird.png" default>Bird 1</option>
+    <option value="bird2.jpg">Bird 2</option>
+    <option value="Cat.jpg">Cat</option>
+  </select>
+  <button id="UpdateImage">Update Image</button>
+  <div>
+    <img src="" id="output_image" width="400" alt="Click Update Image"/>
+    <p>Its a  <span id="result">...   </span>(I'm <span id="probability">...%</span>sure)</p>
+  </div>        
+  <button id="IdentifyImage">Identify Image</button>
     <script src="sketch.js"></script>
 
 </body>
